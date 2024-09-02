@@ -1,0 +1,147 @@
+.product-banner { // Updated class name
+    background: #fff;
+    box-shadow: 0 4px 20px rgb(230, 189, 189);
+    border-radius: 50px;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+  
+    .text-center {
+      text-align: center;
+      span {
+        display: block;
+        font-weight: 600;
+        font-family: "Poppins", sans-serif;
+        font-size: 22px;
+        background: #fde1e1;
+        max-width: 300px;
+        border-radius: 50px;
+        margin: 20px auto;
+        line-height: 30px;
+        color: #393736;
+        padding: 20px;
+      }
+      h2 {
+        font-weight: 700;
+        font-family: "Poppins", sans-serif;
+        font-size: 50px;
+        margin-top: 20px;
+        border-radius: 50px;
+        color: #393736;
+        margin-bottom: 20px;
+      }
+    }
+  
+    .product-service-box { // Updated class name
+      width: 100%;
+      max-height: auto;
+      perspective: 1000px;
+      margin: 0 auto;
+  
+      .flip-card {
+        background-color: transparent;
+        width: 500px;
+        height: 500px;
+        transition: transform 0.5s ease-out;
+        transform-style: preserve-3d;
+        position: relative;
+        margin: 0 auto;
+  
+        &:hover .flip-card-inner {
+          transform: rotateY(180deg);
+        }
+  
+        .flip-card-inner {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
+        }
+  
+        .flip-card-front,
+        .flip-card-back {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          border-radius: 50px;
+          backface-visibility: hidden;
+        }
+  
+        .flip-card-front {
+          background-color: #fff;
+          color: black;
+  
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50px;
+          }
+        }
+  
+        .flip-card-back {
+          background-color: #333;
+          color: white;
+          transform: rotateY(180deg);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+  
+          .product-content { // Updated class name
+            padding: 20px;
+            text-align: center;
+  
+            h3 {
+              margin: 0 0 15px;
+              color: #fff;
+              padding: 10px 20px;
+              font-weight: 600;
+              text-align: center;
+              font-family: "Poppins", sans-serif;
+              font-size: 30px;
+            }
+  
+            p {
+              margin: 0 0 15px;
+              color: #fff;
+              padding: 10px 20px;
+              font-weight: 300;
+              text-align: center;
+              font-family: "Poppins", sans-serif;
+              font-size: 20px;
+              text-decoration: None;
+            }
+            a {
+              color: rgb(255 255 255);
+              text-decoration: none;
+              font-weight: 600;
+              text-align: center;
+              font-family: "Poppins", sans-serif;
+              font-size: 35px;
+              text-decoration: None;
+            }
+  
+            button {
+              color: #fff;
+              background-color: #6634fd;
+              padding: 10px 20px;
+              border-radius: 30px;
+              font-weight: 500;
+              font-family: "Poppins", sans-serif;
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  
+    @media (max-width: 767px) {
+      .product-service-box { // Updated class name
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+  }
+  
